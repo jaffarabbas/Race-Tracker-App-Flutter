@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           await Future.delayed(Duration(milliseconds: 200));
           setState(() {
             player1score = Random().nextDouble() * increment;
-            player2score = Random().nextDouble() * increment;
+            player2score = (Random().nextDouble() * increment) * 2;
             update(player1score, player2score);
             setScoreToResult();
           });
